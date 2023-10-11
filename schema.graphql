@@ -1,0 +1,483 @@
+type Assetsourceupdated @entity {
+  id: ID!
+  asset: Bytes!
+  source: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+type Oassetsourceupdated @entity {
+  id: ID!
+  token: Bytes!
+  source: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+type Fallbackoracleupdated @entity {
+  id: ID!
+  fallbackOracle: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Ownershiptransferred @entity {
+  id: ID!
+  previousOwner: Bytes!
+  newOwner: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Wethset @entity {
+  id: ID!
+  weth: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Abichanged @entity {
+  id: ID!
+  node: Bytes!
+  contentType: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Addrchanged @entity {
+  id: ID!
+  node: Bytes!
+  a: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Addresschanged @entity {
+  id: ID!
+  node: Bytes!
+  coinType: BigInt!
+  newAddress: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Authorisationchanged @entity {
+  id: ID!
+  node: Bytes!
+  owner: Bytes!
+  target: Bytes!
+  isAuthorised: Boolean!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Contenthashchanged @entity {
+  id: ID!
+  node: Bytes!
+  hash: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Dnsrecordchanged @entity {
+  id: ID!
+  node: Bytes!
+  name: Bytes!
+  resource: Int!
+  record: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Dnsrecorddeleted @entity {
+  id: ID!
+  node: Bytes!
+  name: Bytes!
+  resource: Int!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Dnszonecleared @entity {
+  id: ID!
+  node: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Dnszonehashchanged @entity {
+  id: ID!
+  node: Bytes!
+  lastzonehash: Bytes!
+  zonehash: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Interfacechanged @entity {
+  id: ID!
+  node: Bytes!
+  interfaceID: Bytes!
+  implementer: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Namechanged @entity {
+  id: ID!
+  node: Bytes!
+  name: String!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Pubkeychanged @entity {
+  id: ID!
+  node: Bytes!
+  x: Bytes!
+  y: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Textchanged @entity {
+  id: ID!
+  node: Bytes!
+  indexedKey: String!
+  key: String!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Aggregatorupdated @entity {
+  id: ID!
+  token: Bytes!
+  aggregator: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Swapped @entity {
+  id: ID!
+  fromAsset: Bytes!
+  toAsset: Bytes!
+  fromAmount: BigInt!
+  receivedAmount: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Basecurrencyset @entity {
+  id: ID! 
+  baseCurrency: Bytes!
+  baseCurrencyUnit: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type V3addressesproviderregistered @entity {
+  id: ID! 
+  addressesProvider: Bytes! 
+  idValue: BigInt! 
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+type Addressesproviderregistered @entity {
+  id: ID! 
+  addressesProvider: Bytes! 
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+type Addressesproviderunregistered @entity {
+  id: ID! 
+  addressesProvider: Bytes!
+  idValue: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Accrued @entity {
+  id: ID! 
+  asset: Bytes!
+  reward: Bytes!
+  user: Bytes!
+  assetIndex: BigInt!
+  userIndex: BigInt!
+  rewardsAccrued: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Assetconfigupdated @entity {
+  id: ID! 
+  asset: Bytes!
+  reward: Bytes!
+  oldEmission: BigInt!
+  newEmission: BigInt!
+  oldDistributionEnd: BigInt!
+  newDistributionEnd: BigInt!
+  assetIndex: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Claimerset @entity {
+  id: ID! 
+  user: Bytes!
+  claimer: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Emissionmanagerupdated @entity {
+  id: ID! 
+  oldEmissionManager: Bytes!
+  newEmissionManager: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Rewardoracleupdated @entity {
+  id: ID! 
+  reward: Bytes!
+  rewardOracle: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Rewardsclaimed @entity {
+  id: ID! 
+  user: Bytes!
+  reward: Bytes!
+  to: Bytes!
+  claimer: Bytes!
+  amount: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Transferstrategyinstalled @entity {
+  id: ID! 
+  reward: Bytes!
+  transferStrategy: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+type Feeupdated @entity {
+  id: ID!
+  oldFee: BigInt!
+  newFee: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Feesdistributedtotreasury @entity {
+  id: ID!
+  ghoTreasury: Bytes!
+  asset: Bytes!
+  amount: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Flashmint @entity {
+  id: ID!
+  receiver: Bytes!
+  initiator: Bytes!
+  asset: Bytes!
+  amount: BigInt!
+  fee: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Ghotreasuryupdated @entity {
+  id: ID!
+  oldGhoTreasury: Bytes!
+  newGhoTreasury: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Approval @entity {
+  id: ID!
+  owner: Bytes!
+  spender: Bytes!
+  value: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Facilitatoradded @entity {
+  id: ID!
+  facilitatorAddress: Bytes!
+  label: String!
+  bucketCapacity: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Facilitatorbucketcapacityupdated @entity {
+  id: ID!
+  facilitatorAddress: Bytes!
+  oldCapacity: BigInt!
+  newCapacity: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Facilitatorbucketlevelupdated @entity {
+  id: ID!
+  facilitatorAddress: Bytes!
+  oldLevel: BigInt!
+  newLevel: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Facilitatorremoved @entity {
+  id: ID!
+  facilitatorAddress: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Roleadminchanged @entity {
+  id: ID!
+  role: String!
+  previousAdminRole: String!
+  newAdminRole: String!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Rolegranted @entity {
+  id: ID!
+  role: String!
+  account: Bytes!
+  sender: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Rolerevoked @entity {
+  id: ID!
+  role: String!
+  account: Bytes!
+  sender: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Transfer @entity {
+  id: ID!
+  from: Bytes!
+  to: Bytes!
+  value: BigInt!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+type Upgraded @entity {
+  id: ID!
+  implementation: Bytes!
+  evtBlockTime: BigInt!
+  evtBlockNum: BigInt!
+  contractAddress: Bytes!
+  evtTxnHash: Bytes!
+}
+
+
+
+
+
+
+
+
+
